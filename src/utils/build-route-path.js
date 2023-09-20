@@ -6,7 +6,7 @@ export function buildRoutePath(path) {
     "(?<$1>[a-z0-9-_]+)"
   );
 
-  const pathRegex = new RegExp(`^${parthWithParams}`);
+  const pathRegex = new RegExp(`^${parthWithParams}(?<query>\\?(.*))?$`);
 
   return pathRegex;
 }
